@@ -166,6 +166,9 @@ exports.handler = async function (event, context, callback) {
         html: html,
         transforms: transforms
       }),
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
     })
   } catch (error) {
     return callback(null, {
